@@ -2,6 +2,8 @@ package com.unsocialmedia.intouch.cassandra;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +18,7 @@ import org.springframework.data.cassandra.repository.config.EnableCassandraRepos
 @Configuration
 @PropertySource(value = {"classpath:cassandra.properties"})
 public class CassandraConfig extends AbstractCassandraConfiguration {
-    private static final Log LOGGER = LogFactory.getLog(CassandraConfig.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CassandraConfig.class);
 
     @Autowired
     private Environment environment;
